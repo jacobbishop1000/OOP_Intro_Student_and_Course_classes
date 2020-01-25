@@ -15,13 +15,13 @@ class StudentTest {
         Student aStudent = new Student(1, "Mark");
         Course aCourse = new Course(12, 111, "CS222", "A course", 3);
         aStudent.enrollCourse(aCourse);
-        assertEquals(true, aStudent.setGrade(aCourse, 80.0));
+        assertTrue(aStudent.setGrade(aCourse, 80.0));
     }
     @Test
     void setGradeWhenCourseIsNotIncludedTest(){
         Student aStudent = new Student(1, "Mark");
         Course anotherCourse = new Course(11, 222, "CS224", "Another course", 3);
-        assertEquals(false, aStudent.setGrade(anotherCourse, 80.0));
+        assertFalse(aStudent.setGrade(anotherCourse, 80.0));
     }
     @Test
     void calculateGPATest(){
